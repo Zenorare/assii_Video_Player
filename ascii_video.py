@@ -2,6 +2,8 @@ import cv2
 import os
 import shutil
 import time
+import subprocess
+import sys
 
 # ASCII characters (dark → light)
 ASCII_CHARS = "@%#*+=-:. "
@@ -69,6 +71,25 @@ def play_video(video_path="C:/Users/rinsu/Downloads/VID_20250630_163251911.mp4",
         cap.release()
 
 
+def open_terminal_and_play():
+    """
+    Opens a new terminal window and runs the video in it
+    """
+    script_path = os.path.abspath(__file__)
+    
+    if os.name == 'nt':  # Windows
+        # Create a command that will run this script with a flag to play directly
+        cmd = f'start cmd /k python "{script_path}" --play'
+        subprocess.Popen(cmd, shell=True)
+    else:  # Linux/Mac
+        cmd = f'gnome-terminal -- python "{script_path}" --play'
+        subprocess.Popen(cmd, shell=True)
+
+
 if __name__ == "__main__":
-    # Use the default video path from the function definition
-    play_video(width=100)
+    if len(sys.argv) > 1 and sys.argv[1] == "--play":
+        # Direct play mode (called from the new terminal)
+        play_video(width=100)
+    else:
+        # Open a new terminal and play there
+        open_terminal_and_play()
